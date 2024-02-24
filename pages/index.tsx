@@ -12,12 +12,11 @@ export default function Gallery() {
         <div className="absolute inset-0 overflow-hidden">
           <Image
             priority
-            fill
+            objectFit="cover"
             layout="fill"
-            className="object-cover"
             src={img}
             placeholder="blur"
-            alt="PR Clovis banner"
+            alt="Banner do PR Clovis"
           />
           <div className="absolute inset-0 bg-orange-100 mix-blend-multiply" />
         </div>
@@ -51,9 +50,12 @@ export default function Gallery() {
             Deus conosco, pois Ele está pronto para recebê-lo de braços abertos.
           </p>
           <div className="flex justify-center mt-8">
-            <button className="px-6 py-3 border-2 border-black text-black-500 font-semibold rounded-md transition duration-300 ease-in-out hover:bg-black hover:text-white">
+            <a href="https://www.google.com/maps/place/Igreja+Assembl%C3%A9ia+de+Deus+Pentecostal+da+F%C3%A9/@-7.1380851,-34.8278543,17z/data=!3m1!4b1!4m6!3m5!1s0x7acc3d22e2954c7:0xcedc1bda04465845!8m2!3d-7.1380851!4d-34.8252794!16s%2Fg%2F11p12z5db_?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-black text-black-500 font-semibold rounded-md transition duration-300 ease-in-out hover:bg-black hover:text-white">
               Localizar
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -134,7 +136,7 @@ export default function Gallery() {
               de Cristo guiar o seu caminho e a sua vida se tornará uma bênção para todos aqueles que você tocar.</p>
             <button className="px-6 py-3 mt-4 border-2 border-white text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-white hover:text-black">
               Quero conhecer Jesus
-               </button>
+            </button>
           </div>
         </div>
       </section>

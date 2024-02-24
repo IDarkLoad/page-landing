@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import Image from 'next/image'
-import logo from '../public/Logo.png'
+import Image from 'next/image';
+import logo from '../public/Logo.png';
+import Link from 'next/link';
+
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +14,7 @@ export default function Menu() {
   return (
     <div className="absolute inset-x-0 top-0 z-50">
       <div className="flex justify-between items-center px-4 py-3 sm:px-6">
-      <div className="flex items-center">
+        <div className="flex items-center">
           <Image src={logo} alt="Logo" width={120} height={40} />
         </div>
         <div className="sm:hidden">
@@ -47,16 +49,30 @@ export default function Menu() {
           </button>
         </div>
         <ul className={`sm:flex sm:space-x-4 sm:px-4 sm:py-2 ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <li><a href="#" className="text-white hover:text-gray-300">Home</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Projetos</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Calendário</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Sobre</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Contato</a></li>
+          <li>
+            <Link href="/">
+              <p className="text-white hover:text-gray-300">Home</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects">
+              <p className="text-white hover:text-gray-300">Projetos</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/calendar">
+              <p className="text-white hover:text-gray-300">Calendário</p>
+            </Link>
+          </li>
+          <li><a href="/sobre" className="text-white hover:text-gray-300">Sobre</a></li>
         </ul>
       </div>
     </div>
   );
 }
+
+
+
 
 
 
